@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imageslider</title>
+</head>
+<style>
+    .max-height {
+        min-height: 100vh;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .btn {
+        position: absolute;
+        top: 45%;
+       
+        font-weight: bold;
+        background-color: cadetblue;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btnrgt {
+        right: 0;
+    }
+
+    .container {
+        min-height: 60vh;
+        width: 60%;
+        border: 2px solid rgb(0, 162, 255);
+        position: relative;
+        border-radius: 5px;
+        margin: 10% 20%;
+        background-image: url(images/orange.jpg);
+        background-repeat: repeat;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button class="btnleft btn">
+            << </button> <button class="btnrgt btn"> >>
+        </button>
+    </div>
+    <script>
+        
+        const pictures = [
+
+            'orange',
+            'cubes',
+            'stand',
+            'transform'
+
+
+        ]
+        const button = document.querySelectorAll('.btn')
+        const container = document.querySelector('.container')
+        console.log(button)
+        let counter = 0
+        button.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                if (btn.classList.contains('btnrgt')) {
+                    counter--
+                    if (counter < 0) {
+                        counter = pictures.length - 1
+                    }
+                    container.style.backgroundImage = `url('images/${pictures[counter]}.jpg')`
+                }
+                if (btn.classList.contains('btnleft')) {
+                    counter++
+                    if (counter > pictures.length -1) {
+                        counter = 0
+                    }
+                    container.style.backgroundImage = `url('images/${pictures[counter]}.jpg')`
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

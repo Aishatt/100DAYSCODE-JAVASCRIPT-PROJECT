@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change background color</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            width: 100%;
+           background-color: rgb(37, 86, 114);
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: hidden;
+        }
+        button{
+            outline: none;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            color: rgb(207, 170, 241);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+   <button onclick="change()">CLICK TO CHANGE BACKGROUND</button> 
+  </div>
+  <script>
+ const contain=document.querySelector('.container');
+ //contain.style.width='100%'; 
+ //contain.style.color='black';    
+ const colors=['pink','red','green','yellow','black','blue']
+function change(){
+colorIndex=parseInt(Math.random() * colors.length)
+contain.style.backgroundColor = colors[colorIndex]
+}
+    </script>
+</body>
+</html>

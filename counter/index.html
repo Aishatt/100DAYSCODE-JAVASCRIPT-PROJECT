@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Messsage</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&display=swap');
+
+
+
+     
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            /*  font-family: 'Noto Serif';*/
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            overflow-y: hidden;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 50%;
+            height: 250px;
+            background-color: rgb(211, 74, 211);
+            position: relative;
+            padding: 5px 10px;
+           
+            box-shadow: 2px 3px 3px rgba(49, 19, 2, 0.493);
+            text-align: center;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .counter {
+            width: 100%;
+            height: 200px;
+            background-color: violet;
+            text-align: center;
+            margin-left: 0px;
+            font-weight: 700;
+            font-size: 1000%;
+
+              
+        }
+        button {
+            outline: none;
+            padding: 10px;
+            border: 2px solid rgb(153, 208, 218);
+            border-radius: 3%;
+            width: 40%;
+
+            color: rgb(17, 1, 1);
+            background-color: rgb(112, 176, 206);
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: white;
+
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <div class="counter">
+        </div>
+        <div class="btn">
+            <button class="countbtn nxt">Add</button>
+            <button class="countbtn prev">Substract</button></div>
+    </div>
+
+
+
+    <script>
+        //(function () {
+        const buttons = document.querySelectorAll('.countbtn');
+        let count = 0;
+        const counter = document.querySelector('.counter')
+        counter.textContent = count
+
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                if (button.classList.contains("nxt")) {
+                    count++
+                } else if (button.classList.contains("prev")) {
+                    count--
+                }
+                //countertext
+
+                counter.textContent = count
+                //condition
+                if (count < 0) {
+                    counter.style.color = 'red'
+                } else if (count > 0) {
+                    counter.style.color = 'green'
+                } else {
+                    counter.style.color = 'black'
+                }
+            })
+        })
+
+        //  })()
+        //assign a function to both buttons
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote generator</title>
+  
+    <style> 
+     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            font-family: 'Noto Serif', serif;
+
+            background-color: rgb(0, 0, 0);
+        }
+
+        button {
+            outline: none;
+            padding: 10px;
+            border: none;
+            border-radius: 3%;
+            width: 90%;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(230, 215, 243);
+            color: white;
+        }
+
+        div {
+            background-color: rgb(78, 52, 30);
+            height: 300px;
+            color: white;
+            position: absolute;
+            width: 50%;
+            left: 25%;
+            text-align: center;
+            margin-top: 12%;
+        }
+        .author{
+            margin-left: 25%;
+           
+  color: #64b6ac;
+}
+        
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div>
+            <button id="generate">Generate code
+               </button> 
+            <h2 id="quote"></h2>
+            <h3 class="author"></h3>
+        </div>
+    </section>
+    <script src="quote.js">
+ /*       (function(){
+  const quotes=[
+    {
+        quote:
+        "Life is too short and sweet to be spent by cribbing and complaining about things. Here are some random quotes about the most wonderful gift that we've got",
+      author: " Life"
+    },
+    {
+        quote:
+        "Humor is richly rewarding to the person who employs it. It has some value in gaining and holding attention. But it has no persuasive value at all",
+        author: "John Kenneth Galbraith"
+    },
+    {
+        quote:
+        "God save me from my friends. I can protect myself from my enemies.",
+        author: "Claude Louis Hector de Villars "
+    },
+    {
+        quote: "The price of anything is the amount of life you exchange for it.",
+      author: "David Thoreau"
+    },
+    {
+        quote:
+        "A critic is someone who never actually goes to the battle, yet who afterwards comes out shooting the wounded.",
+      author: " Tyne Daly"
+    },
+];
+ function change(){
+   const random= Math.floor(math.random() * quotes.length);
+console.log(random);
+ document.getElementById('quote').textContent=quotes[random].quote;
+ document.getElementById('author').textContent=quotes[random].author;
+}
+
+ 
+})();*/
+
+    </script>
+</body>
+
+</html>

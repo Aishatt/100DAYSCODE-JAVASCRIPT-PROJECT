@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Messsage</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&display=swap');
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            /*  font-family: 'Noto Serif';*/
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            overflow-y: hidden;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            
+            height: 250px;
+            background-color: rgb(211, 74, 211);
+            position: relative;
+            padding: 5px 10px;
+           
+            box-shadow: 2px 3px 3px rgba(49, 19, 2, 0.493);
+            text-align: center;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .counter {
+            width: 100%;
+            height: 200px;
+            background-color: violet;
+            text-align: center;
+            margin-left: 0px;
+            font-weight: 700;
+            font-size: 1000%;
+
+        }
+@media screen and (min-width:700px)  {
+    
+}
+        button {
+            outline: none;
+            padding: 10px;
+            border: 2px solid rgb(153, 208, 218);
+            border-radius: 3%;
+            width: 40%;
+
+            color: rgb(17, 1, 1);
+            background-color: rgb(112, 176, 206);
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: white;
+
+        }
+        #inputNum{
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="counter">
+        </div>
+        <div class="btn">
+            <button class="countbtn nxt">SQR</button>
+            <form action="">
+                <input type="number" value="" name="" id="inputNum">
+            </form>
+            <button class="countbtn prev">SQRT</button></div>
+    </div>
+
+<script>
+    const number=document.getElementById('inputNum')
+ const buttons = document.querySelectorAll('.countbtn');
+ const prev = document.querySelector('.prev');
+ prev.style.display='none'
+ const next = document.querySelector('.nxt');
+
+      //    0;
+        const counter = document.querySelector('.counter')
+       let count = counter.textContent 
+
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                if (button.classList.contains("nxt")) {
+                    
+                   if(number.value > 0)
+                   {                
+                      count=(number.value)*(number.value)
+                      
+                   }
+                   else{
+                    count= -(number.value)*(number.value)
+                    counter.style.color = 'red'
+                    
+                   }
+                   prev.style.display='block'
+                } 
+
+                if (button.classList.contains("prev")) {
+                    
+                    if(number.value > 0)
+                   {                
+                    count=count/(number.value)
+                   }
+                   else{
+                    count= count/(-number.value)
+                    
+                   }
+                number.value=null
+                prev.style.display='none'
+                 } 
+                //countertext
+
+                counter.textContent = count
+                //condition
+                if (count > 0) {
+                   counter.style.color = 'green'
+                } else if (count < 0) {
+                    counter.style.color = 'red'
+                } else {
+                    counter.style.color = 'black'
+                }
+            })
+        })
+</script>
+</body>
+</html>

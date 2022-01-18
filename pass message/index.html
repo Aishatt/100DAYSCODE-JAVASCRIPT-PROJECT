@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Messsage</title>
+  
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&display=swap');
+
+   
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+         /*  font-family: 'Noto Serif';*/
+         font-family: 'Roboto', sans-serif;
+           min-height: 100vh;
+           overflow-y: hidden;
+           position: relative;
+        }
+        form{
+            display: inline-block;
+            
+        }
+        section{
+            width: 50%;
+        background-color: rgb(211, 74, 211);
+        position: absolute;
+        padding: 50px 10px;
+        margin-top: 10%;
+        margin-left: 20%;
+        box-shadow: 2px 3px 3px rgba(49, 19, 2, 0.493);
+        text-align: center;
+
+         }
+
+        #text {
+            outline: none;
+            height: 30px;
+            border: none;
+            
+            width: 100%;
+             background-color: rgb(230, 215, 243);
+        }
+        #submit{
+            outline: none;
+            padding: 10px;
+            border: 2px solid rgb(153, 208, 218);
+            border-radius: 3%;
+           width: 40%;
+           margin: 10px 0px;
+             color: rgb(233, 223, 223);
+             background-color: rgb(112, 176, 206);
+        }
+       #submit:hover {
+          cursor: pointer;
+          color: white;
+           
+        }
+
+        #message {
+          color:  rgb(112, 176, 206) ;
+          display: none;
+          
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <section>
+
+       <form action="get" id="msgform">
+           <input type="text" name="text" id="text">
+           <input type="button" id="submit" value="Submit">
+       </form>
+           
+           <div>Last Messsage Delivered</div>
+           <h4 id="message">hello world</h4>
+      
+    </section>
+    <script>
+    const form = document.getElementById('msgform')
+    /*form.addEventListener('submit',function(e){
+        //prevent the form default submit action
+        e.preventDefault()
+        //get user input from form
+       let typeMessage=document.getElementById('text')
+       let lastMessage=document.getElementById('message')
+       if(typeMessage.value ===''){
+           lastMessage.style.display='block';
+           setTimeout(function(){
+               lastMessage.style.display='none'
+           },2000)
+       }
+       else{
+           //clear message input and change message content
+         
+           typeMessage.value=''
+       }
+    })*/
+    const typeMessage=document.getElementById('text')
+       const lastMessage=document.getElementById('message')
+   const submit=document.getElementById('submit');
+   //form.addEventListener('submit',function(){
+       if(typeMessage.value ===''){
+ lastMessage.textContent=typeMessage.value;
+         lastMessage.style.display='block';
+       }
+        
+ 
+    </script>
+</body>
+</html>
+    
