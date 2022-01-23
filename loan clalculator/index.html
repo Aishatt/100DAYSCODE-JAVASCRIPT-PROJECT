@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loan calculator</title>
+    <style>
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            background-color: #707070;
+            color: white;
+            margin-top: 9%;
+            padding: 10px 15px;
+            width: 40%;
+            height: 300px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+        }
+        input{
+            width: 60%;
+            outline: none;
+            border: none;
+            padding: 5px;
+        }
+        @media screen and (max-width:678px){
+           .container{
+               margin-top: 25%;
+               width: 80%;
+           } 
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <H2 style="text-align: center;">
+             Loan calculator   
+            </H2>
+            <div>Loan Amount: $<input id="amount" type="number" min="1" max="5000" onchange="output()"></div>
+            <div>Interest Rate: %<input id="interest_rate" min="0" max="100" value="10" step=".1" onchange="output()"></div>
+            <div>Months to Pay: <input id="months" type="number" min="1" max="300" value="1" step="1" onchange="output()"></div>
+
+<h2 id="payment" style="color: rgb(147, 255, 171);"></h2>
+        </div>
+    </section>
+    <script>
+      function output(){
+    const amount = document.querySelector('#amount').value;
+    const interestRate = document.querySelector('#interest_rate').value;
+    const months = document.querySelector('#months').value;
+    //interest formula
+    const interest = (amount * (interestRate * 0.01)) / months;
+    let payment = ((amount / months) + interest).toFixed(2); //calculate monthly payment
+
+    //to add a comma after every three digits
+    payment = payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //\B looks for a word boundary, ? says what to look for, \d looks for 3 digits in a row
+    //output
+    document.querySelector('#payment').innerHTML = `Monthly Payment = ${payment}` 
+    
+}
+    </script>
+</body>
+</html>
+<!--div>
+    Loan Amount: $<span><input type="number" onchange="calculate()" name="number" id="loan"></span>
+</div>
+<div>
+    Interest Rate: %<span><input type="number" onchange="calculate()" name="number" id="interest"></span>
+</div>
+<div>
+Months to pay: <span> <input type="number" onchange="calculate()" name="number" id="month"></span>
+</div>--->
