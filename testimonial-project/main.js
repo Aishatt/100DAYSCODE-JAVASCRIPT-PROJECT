@@ -22,19 +22,19 @@
  }
  // constructor= array()
  createInfo(0, 'John',
-     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis neque reprehenderit laborum, corporis explicabo assumenda. Porro impedit consectetur animi, reprehenderit recusandae sapiente at aliquam reiciendis modi ipsam rerum suscipit distinctio?','23'
+     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis neque reprehenderit laborum, distinctio?','20'
      )
  createInfo(1, 'Sandy',
-     'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock','23'
+     'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC','23'
      )
  createInfo(2, 'Amy',
-     'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.','23'
+     'There are many  by injected humour, or randomised words which don\'t look even slightly believable.','22'
      )
  createInfo(3, 'Tyrell',
-     'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.','23'
+     'If you are going to use a passage of Lorem Ipsum, you need  embarrassing hidden in the middle of text.','25'
      )
  createInfo(4, 'Wanda',
-     'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.','23'
+     'Lorem Ipsum has been the industry\'s standard dummy text, when an unknown printer took a galley of type and scrambled it to make a type specimen book.','26'
      );
      buttons.forEach(function(button){
         button.addEventListener('click', function(e){
