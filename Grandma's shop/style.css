@@ -8,6 +8,9 @@
   --yellowTrans: rgba(249, 228, 148, 0.5);
   --mainGrey: rgb(238, 238, 238);
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Kaushan Script", cursive;
@@ -23,9 +26,12 @@ body {
   justify-content: space-between;
 }
 nav{
-   background-color: blanchedalmond;
+   background-color: rgba(231, 231, 231, 0.671);
     display: flex;
-    padding: 2px 10px;
+    width: 100%;
+ position: fixed; 
+ padding: 3px 15px;
+ z-index: 999;  /* Fixed position - sit on top of the page */
     flex-direction: row;  justify-content: space-between;
 }
 /* nav links */
@@ -34,6 +40,11 @@ text-decoration: none;
 color: #ef7998;
 margin: 0 15px;
 font-size: 25px;
+}
+.link>a:hover{
+  border-bottom: 3px solid rgb(236, 141, 141);
+  transition: all .5s ease-in-out;
+  color: #000;
 }
 .link,.item,.phone{
   align-self: center;
@@ -142,7 +153,8 @@ width: 90%;
 text-align: center;
 font-size: 1.5em;
 padding-top: 10px;
-background-color:rgb(238, 238, 238); ;
+background-color:rgba(250, 201, 246, 0.541); ;
+position: relative;
 }
 .item-links{
   display: inline-flex;
@@ -192,14 +204,15 @@ display: none;
 background-color: rgb(180, 175, 175);
 display: inline-block;
 border: none;
-  height: 30px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+  height: 31px;
 left: 32%;
-margin-top: 5.2px;
+margin-top: 5.8px;
 position: absolute;
-
 }
 form{
-  margin-top: 4%;
+  margin-top: 5%;
  
 }
 form>input{
@@ -281,7 +294,7 @@ margin-bottom: 2em;
  display:inline-flex;
   flex-direction: column;
   position: absolute;
-  background-color: blanchedalmond;
+  background-color: rgba(209, 141, 183, 0.822);
   width: 70%;
   left: 15%;
   top: 8%;
@@ -293,6 +306,9 @@ margin-bottom: 2em;
 }
 .navlink>img{
   width: 12%;
+}
+nav{
+  width: 90%;
 }
 .item,.phone {
  margin-top: 15px;
@@ -393,6 +409,7 @@ right: 5%;
   background: rgba(0, 0, 0, 0.849);
   width: 25%;
   color: white;
+  z-index: 999;
 }
 #cart-img{
   width: 50%;
@@ -432,6 +449,30 @@ padding: 10px;
 }
 .cart{
   display: none;
+}
+.coupon {
+  border: 5px dotted #bbb; /* Dotted border */
+  width: 80%;
+  border-radius: 15px; /* Rounded border */
+  margin: 0 auto; /* Center the coupon */
+  max-width: 600px;
+}
+
+.container {
+  padding: 2px 16px;
+  background-color: #f1f1f1;
+}
+.container>p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.promo {
+  background: #ccc;
+  padding: 3px;
+}
+
+.expire {
+  color: red;
 }
 /*.anime{
   text-transform: uppercase;
