@@ -25,6 +25,7 @@ body {
 nav{
    background-color: blanchedalmond;
     display: flex;
+    padding: 2px 10px;
     flex-direction: row;  justify-content: space-between;
 }
 /* nav links */
@@ -61,8 +62,8 @@ height: 90vh;
 .banner>.title{
   position: relative;
   animation-name: example;
-  animation-duration: 2s;
-  
+  animation-duration: 4s;
+  text-align: center;
 }
 #explore{
   display: inline-block;
@@ -77,7 +78,7 @@ height: 90vh;
 @keyframes example {
  80%{border-color: aqua;transition: ease-in-out;} 
  40%{border-color: var(--mainPink);}
- 10%{border-color: var(--yellowTrans); margin-left: 10%;}
+ 10%{border-color: var(--yellowTrans);}
  5%{border-color: none; margin-left: 10%;color: rgb(221, 221, 221);}
 }
 .title>p{
@@ -107,7 +108,7 @@ border:3px solid black;
   margin: 4em 10em;
 }
 .abt{
-width: 80%;
+width: 90%;
 }
 #imgv>img{
   width: 100%;
@@ -124,13 +125,13 @@ width: 80%;
 }
 #imgv::before{
  animation-name: example;
- animation-duration: 3s;
+ animation-duration: 8s;
  animation-iteration-count: infinite;
   content: "";
   width: 100%;
    position: absolute;
-  top:  -4%;
-  left:-2%;
+  top:  -1%;
+  
   height: 100%;
   outline: 0.5rem solid var(--mainYellow);
  transition: all .8s ease-in-out;
@@ -140,6 +141,7 @@ width: 80%;
 #items{
 text-align: center;
 font-size: 1.5em;
+padding-top: 10px;
 background-color:rgb(238, 238, 238); ;
 }
 .item-links{
@@ -190,19 +192,23 @@ display: none;
 background-color: rgb(180, 175, 175);
 display: inline-block;
 border: none;
-  height: 29px;
-left: 37%;
+  height: 30px;
+left: 32%;
 margin-top: 5.2px;
 position: absolute;
 
+}
+form{
+  margin-top: 4%;
+ 
 }
 form>input{
   outline: none;
   border: none;
   align-items: center;
   position: relative;
-  height: 30px;
-  width: 20%;
+  height: 31px;
+  width: 30%;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -230,6 +236,9 @@ form>input{
   #image{
     display: block;
   }
+  nav{
+    padding: 5px 30px;
+  }
 nav>.icon{
   display: block;
   align-self: center;
@@ -240,7 +249,20 @@ nav>.icon{
    margin-top: 2em;
   }
   .item-links>p{
-    margin: 0px 10px;
+    margin: 10px 10px;
+  }   
+ #form{
+   margin-left: -38px;
+ }   
+ form>input{
+   width: 50%;
+ }
+ form{
+   margin-left: 10%;
+ }
+ .item-links{
+   display: inline-block;
+   margin: 20px 0px;
  }
  #sect{
   display:grid;
@@ -273,7 +295,7 @@ margin-bottom: 2em;
   width: 12%;
 }
 .item,.phone {
- margin: 15px;
+ margin-top: 15px;
   }
   .phone{
     
@@ -286,11 +308,11 @@ margin-bottom: 2em;
   display: none;
 }
 .card:hover #icon>img{
-  bottom:26.5%;
+  bottom:25%;
 }
 .item {
- 
-  width: 50%;
+border: none;
+  width: 60%;
  
   }
   .modal-img{
@@ -301,7 +323,17 @@ margin-bottom: 2em;
     margin-top: -10%;
     margin-right: -25%;
    } 
-  
+   
+ 
+   .cart-button{
+    justify-content: center;
+    align-items: center; 
+    
+   }
+
+   .cart-item{
+  flex-direction: column;
+   }
 }
 
 .search-box {
@@ -319,12 +351,19 @@ margin-bottom: 2em;
   /*display: none;*/
  
 }
-.close{
+.close,.close-cart{
   font-size: 40px;
   color: rgb(199, 23, 23);
   cursor: pointer;
   position: absolute;
-  top: 10%;
+
+}
+.close-cart{
+top: 0;
+right: 5%;
+}
+.close{
+    top: 10%;
   right: 30%;
 }
 .close:hover{
@@ -347,3 +386,76 @@ margin-bottom: 2em;
   justify-content: space-between;
   margin: 2% 31.5%;
 }
+#cart-container{
+ padding: 20px;
+  position: absolute; top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.849);
+  width: 25%;
+  color: white;
+}
+#cart-img{
+  width: 50%;
+  border-radius: 50%;
+ 
+}
+.cart-item{
+display: flex;
+justify-content: space-between;
+padding: 10px;
+}
+.total-container{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.cart-button>a{
+  text-decoration: none;
+  color: #ef7998;
+  border:1px solid #fff;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+   text-align: center;
+}
+.cart-button{
+  border: 2px solid rgba(85, 109, 97, 0.288);
+  display:flex ;
+   flex-direction: column;
+}
+
+.cart-button>a:hover{
+  background-color: aliceblue;
+}
+.show-cart{
+  display: block;
+}
+.cart{
+  display: none;
+}
+/*.anime{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #65476e 27%,
+    #385715 60%,
+    #a3325e 100%,
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: rgb(139, 67, 67);
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
+  animation: anime linear infinite;
+  animation-duration: 2s;
+  display: inline-block;
+  font-size: 70px;
+  text-align: center;
+}
+@keyframes anime {
+to{
+  background-position: 200% center;
+}
+} */

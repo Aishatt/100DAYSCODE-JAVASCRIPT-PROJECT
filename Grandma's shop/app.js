@@ -7,8 +7,11 @@ const itemslinks = document.querySelector('.item-links')
 const cards = document.querySelector('.cards')
 const card = document.querySelectorAll('.card')
 const cart = document.querySelector('.item')
+const cartContainer = document.querySelector('#cart-container')
+const clearCart=document.querySelector('#clear-cart')
+const checkout=document.querySelector('.checkout')
 
-
+navicon.style.cursor='pointer';
 navicon.addEventListener('click', function () {
     if (navicon.classList.contains('show')){
            navbar.style.display = 'inline-flex'
@@ -70,10 +73,6 @@ pasteries.forEach(function (button) {
     })
 })
 
-cart.addEventListener('click', function () {
-    (cart.style.color = 'green')
-})
-
 const modalContainer = document.querySelector('.modal-container')
 const modalimage = document.querySelector('.modal-img')
 const itemImage = document.querySelectorAll('.item-img')
@@ -116,6 +115,19 @@ nxtbtn.addEventListener('click', function () {
 });
 //close button
 const closebtn = document.querySelector('.close')
+
 closebtn.addEventListener('click', function () {
     modalContainer.style.display = 'none'
+});
+//CART
+
+cart.addEventListener('click', function () {
+    if(cartContainer.classList.contains('cart')){
+        cartContainer.classList.remove('cart')}
+       
+});
+
+const closecart = document.querySelector('.close-cart')
+closecart.addEventListener('click', function () {
+    cartContainer.classList.add('cart')
 });

@@ -5,12 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- bootstrap css -->
-
   <!-- main css -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- font awesome -->
 
   <title>Grandma's shop</title>
 
@@ -25,16 +21,16 @@
     <div class="navlink">
      
       <div class="link">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Store</a>
+        <a href="#sec2">Home</a>
+        <a href="#sect">About</a>
+        <a href="#items">Store</a>
       </div>
       <div class="phone">
         <img  style="margin-right: 5px;" src="img/3059446.png" width="8%">
         0928625242
       </div>
       <div class="item">
-      <span style="margin-right: 35px;"><img src="img/shopping-cart-solid.svg" width="10%" srcset=""> </span>  2 items - $10.87
+      <span style="margin-right: 15px;"><img src="img/shopping-cart-solid.svg" width="10%" srcset=""> </span>  2 items - $10.87
       </div>
 
     </div>
@@ -43,22 +39,60 @@
     </div>
     </nav>
 
-    <!--<div class="d-none none">
-      <img src="img/logo.svg" id="image1" srcset="">
-      <div class="icon none" onclick="showlist()">
-        <img src="img/icons8-menu-24.png" srcset="">
-      </div>
-    </div> -->
-
   </header>
   <!--banner -->
-  <section>
+  <section id="sec2">
     <div class="banner">
       <div class="title">
         Welcome To <span style="color:#ef7998; font-size: 2em;">Grandma's</span>
         <p >Explore</p>
       </div>
     </div>
+    <div id="cart-container" class="cart">
+      <!-- cart item -->
+      <div class="cart-item ">
+        <img src="img/cake-2.jpeg"  id="cart-img" alt="">
+        <div class="item-text">
+
+          <p id="cart-item-title" class="">Cart item</p>
+          <span>$</span>
+          <span id="cart-item-price" class="cart-item-price" >10.99</span>
+        </div>
+        <a href="#" id='cart-item-remove' class="cart-item-remove">
+          <i class="fas fa-trash"></i>
+        </a>
+      </div>
+      <!--end of  cart item -->
+      <!-- cart item -->
+      <div class="cart-item ">
+        <img src="img/cake-1.jpeg"  id="cart-img" alt="">
+        <div class="item-text">
+
+          <p id="cart-item-title" class="">Cart item</p>
+          <span>$</span>
+          <span id="cart-item-price" class="cart-item-price" >10.99</span>
+        </div>
+        <a href="#" id='cart-item-remove' class="cart-item-remove">
+          <i class="fas fa-trash"></i>
+        </a>
+      </div>
+      <!--end of  cart item -->
+      <!-- cart total -->
+      <div class="total-container">
+        <h5>Total</h5>
+        <h5> $ <strong id="cart-total">10.00</strong> </h5>
+      </div>
+      <!--end cart total -->
+      <!-- cart buttons -->
+      <div class="cart-button">
+        <a href="#" id="clear-cart" >clear cart</a>
+        <a href="#" class="checkout">checkout</a>
+        <div class="close-cart"> <b>x</b></div>
+      </div>
+      <!--end of  cart buttons -->
+      <!--  -->
+    </div>
+  
   </section>
    <!--About -->
   <section id="sect">
@@ -218,6 +252,10 @@
 <div class="close"> <b>x</b></div>
 </div>
 
+
+<!---<div >
+  <h1 class="anime">ADEBAYO AISHAT</h1>
+</div>--->
   <script src="app.js"></script>
 </body>
 
