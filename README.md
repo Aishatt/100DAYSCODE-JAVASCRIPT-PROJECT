@@ -1,4 +1,4 @@
-# NEW100DAYSCODE
+# My NEW100DAYSCODE JavaScript Challenge
 This includes projects from 100days javascript beginners projects ,
 deployed website (filter modal) :  https://zealous-tereshkova-6c6804.netlify.app/  ==>completed
 deployed Counter : https://vigilant-kirch-a4db66.netlify.app/ ==>completed
